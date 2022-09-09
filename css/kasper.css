@@ -1051,3 +1051,43 @@ header nav .form input[type="search"] {
     }
 }
 /* End Subscribe */
+
+/* Contact */
+.contact {
+    padding-block: var(--section-padding);
+}
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+.contact .content form {
+    flex-basis: 70%;
+}
+.contact .content form .main-input {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+    border: 1px solid #ccc;
+}
+.contact .content form textarea.main-input {
+    height: 200px;
+}
+.contact .content form .main-input:focus {
+    outline: none;
+}
+.contact .content form input[type="submit"] {
+    padding: 20px;
+    color: var(--white);
+    background-color: var(--main-color);
+    border: none;
+    display: flex;
+    margin-left: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--main-duration);
+}
+.contact .content form input[type="submit"]:hover {
+    background-color: #11abd6;
+}
+/* End Contact */

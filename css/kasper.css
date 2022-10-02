@@ -1159,7 +1159,7 @@ header nav .form input[type="search"] {
 footer {
     padding-block: calc(var(--section-padding) / 2);
     position: relative;
-    background: url(/images/footer.jpg);
+    background: url(../images/footer.jpg);
     background-size: cover;
     /* background-attachment: fixed;*/
 }

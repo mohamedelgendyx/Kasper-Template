@@ -36,7 +36,7 @@ arrow[0].onclick = () => {
 }
 arrow[1].onclick = () => {
     i = (i + 1) % n;
-    landing.style.backgroundImage = `url./images/${images[i]})`;
+    landing.style.backgroundImage = `url(./images/${images[i]})`;
     change(bullets);
 }
 for (let idx = 0; idx < bullets.length; idx++) {

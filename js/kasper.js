@@ -9,6 +9,7 @@ menu.onclick = () => {
     closeMenu.style.opacity = closeMenu.style.opacity == "1" ? "0" : "1";
     list.classList.toggle("full-list");
 }
+
 // search icon
 const navbar = document.querySelector("div.navbar");
 form = document.querySelector("div.form");
@@ -20,6 +21,7 @@ search.onclick = () => {
     input.classList.toggle("search-input");
     form.classList.toggle("form-stretch");
 }
+
 // landing section slider
 let images = ["landing-01.webp", "landing-02.webp", "landing-03.webp"];
 const arrow = document.querySelectorAll(".arrow");
@@ -50,6 +52,7 @@ function change(bullets) {
     });
     bullets[i].classList.add("active-bullet");
 }
+
 // dots of temtimonials
 dots = document.querySelectorAll(".dots li");
 for (let idx = 0; idx < dots.length; idx++) {
@@ -61,3 +64,20 @@ for (let idx = 0; idx < dots.length; idx++) {
     }
 }
 
+// placeholder of input
+const formInput = document.querySelectorAll(".main-input")
+const placeholder = document.querySelectorAll(".placeholder")
+
+var placeholder_movement = (el, holder) => {
+    el.onfocus = () => holder.classList.add("has-data");
+    el.onblur = () => {
+        if (el.value === "")
+            holder.classList.remove("has-data");
+    }
+}
+
+placeholder_movement(formInput[0], placeholder[0]);
+placeholder_movement(formInput[1], placeholder[1]);
+
+placeholder[0].onclick = () => { formInput[0].onfocus() }
+placeholder[1].onclick = () => { formInput[1].onfocus() }

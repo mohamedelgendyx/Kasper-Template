@@ -31,18 +31,18 @@ let i = 0, n = images.length;
 arrow[0].onclick = () => {
     i = (i - 1) % n;
     i = i < 0 ? n - 1 : i;
-    landing.style.backgroundImage = `url(https://github.com/mohamedelgendyx/Kasper-Template/tree/main/images/${images[i < 0 ? -i : i]})`;
+    landing.style.backgroundImage = `url(./images/${images[i < 0 ? -i : i]})`;
     change(bullets);
 }
 arrow[1].onclick = () => {
     i = (i + 1) % n;
-    landing.style.backgroundImage = `url(https://github.com/mohamedelgendyx/Kasper-Template/tree/main/images/${images[i]})`;
+    landing.style.backgroundImage = `url./images/${images[i]})`;
     change(bullets);
 }
 for (let idx = 0; idx < bullets.length; idx++) {
     bullets[idx].onclick = () => {
         i = idx;
-        landing.style.backgroundImage = `url(https://github.com/mohamedelgendyx/Kasper-Template/tree/mainimages/${images[idx]})`;
+        landing.style.backgroundImage = `url(./images/${images[idx]})`;
         change(bullets);
     }
 }
